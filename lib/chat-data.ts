@@ -73,24 +73,24 @@ export const quickLinks = [
     href: "/careers",
     description: "Join our dynamic team"
   },
-  {
-    title: "Customer Support",
-    href: "#support",
-    description: "We're here to help"
-  },
-  {
-    title: "About Us",
-    href: "#about",
-    description: "Our story and mission"
-  },
-  {
-    title: "Privacy Policy",
-    href: "#privacy",
-    description: "How we protect your data"
-  },
-  {
-    title: "Terms of Service",
-    href: "#terms",
-    description: "Our service agreement"
-  }
+  // {
+  //   title: "Customer Support",
+  //   href: "#support",
+  //   description: "We're here to help"
+  // },
+  // {
+  //   title: "About Us",
+  //   href: "#about",
+  //   description: "Our story and mission"
+  // },
+  // {
+  //   title: "Privacy Policy",
+  //   href: "#privacy",
+  //   description: "How we protect your data"
+  // },
+  // {
+  //   title: "Terms of Service",
+  //   href: "#terms",
+  //   description: "Our service agreement"
+  // }
 ];

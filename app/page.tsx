@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { playfair } from "./fonts";
 import { Button } from "@/components/ui/button";
@@ -9,20 +10,22 @@ import { Chatbot } from "@/components/chat/Chatbot";
 import { ShoppingBag, Truck, Clock, Shield, HeartHandshake, MessageSquare, Instagram, Facebook, Twitter } from "lucide-react";
 
 export default function Home() {
+  const [showBanner, setShowBanner] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      setShowBanner(scrollY < 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <main className="min-h-screen">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <motion.h1 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className={`${playfair.className} text-3xl font-bold text-gradient`}
-          >
-            Zinovaa
-          </motion.h1>
-        </div>
-      </header>
+         
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 hero-gradient">
@@ -40,9 +43,7 @@ export default function Home() {
               Welcome to Zinovaa - Elevate Your Everyday
             </p>
             <p className="text-lg text-gray-500 mb-10">
-              At Zinovaa, we believe that style is more than just clothing – it&apos;s a statement of who you are. 
-              Born from a passion for contemporary fashion and a vision for the future, we curate pieces that 
-              empower you to express your authentic self.
+            Fashion is personal, and at Zinovaa, we take it personally. 💅 We serve up styles that scream **authentic you** and get them to your door at lightning speed. ⚡ Because your vibe is too good to wait. Let’s slay, stat.
             </p>
             <Button size="lg" className="bg-red-600 hover:bg-red-700">
               Shop Now

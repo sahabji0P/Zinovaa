@@ -16,14 +16,14 @@ export function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ml-20">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h4 className="text-xl font-semibold mb-6">About Zinovaa</h4>
-            <p className="text-gray-300">
+            <h4 className="text-xl font-semibold mb-6">Follow the Drip</h4>
+            {/* <p className="text-gray-300">
               Express your authentic self with Zinovaa&apos;s curated fashion collections,
               delivered in 30-60 minutes.
-            </p>
+            </p> */}
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -47,6 +47,7 @@ export function Footer() {
                   <Link 
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
+                    target="_blank"
                   >
                     {link.title}
                   </Link>
@@ -58,12 +59,15 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-semibold mb-6">Contact Us</h4>
             <div className="space-y-3 text-gray-300">
-              <p>Email: contact@zinovaa.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
-              <p>Address: 123 Fashion Street,<br />Style City, ST 12345</p>
+              <p>Email: weblanders.sd@gmail.com
+              </p>
+              <p>Phone: +91-6306010045</p>
+              <p>Address: Bennett University,<br />Greater Noida, Uttar Pradesh, India</p>
             </div>
           </div>
-
+          
+          {/* NewsLetter */}
+{/* 
           <div>
             <h4 className="text-xl font-semibold mb-6">Newsletter</h4>
             <p className="text-gray-300 mb-4">
@@ -79,7 +83,9 @@ export function Footer() {
                 Subscribe
               </Button>
             </div>
-          </div>
+          </div> */}
+
+
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">

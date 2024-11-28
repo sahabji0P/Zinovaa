@@ -51,7 +51,7 @@ export default function CareersPage() {
   ];
 
   return (
-    <main className="min-h-screen py-20">
+    <main className="min-h-screen py-52">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,12 +62,12 @@ export default function CareersPage() {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Be part of a dynamic team that's revolutionizing the fashion industry
+            Be part of a dynamic team that&apos;s revolutionizing the fashion industry
             with technology and innovation.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}

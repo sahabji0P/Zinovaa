@@ -54,6 +54,7 @@ export function Chatbot() {
     
     const lowerMessage = message.toLowerCase();
 
+    // Check for specific keywords
     if (lowerMessage.includes('vendor') || lowerMessage.includes('become a vendor')) {
       setTimeout(() => {
         addMessage("Please fill out our vendor registration form:", 'bot', 'vendor');
@@ -72,24 +73,7 @@ export function Chatbot() {
 
     if (lowerMessage.includes('career') || lowerMessage.includes('job') || lowerMessage.includes('opening')) {
       setTimeout(() => {
-        addMessage(`Current openings at Zinovaa:
-        
-1. Senior Fashion Buyer
-   - 5+ years experience in fashion buying
-   - Strong market knowledge
-   - Excellent negotiation skills
-
-2. UI/UX Designer
-   - 3+ years experience
-   - E-commerce portfolio
-   - Proficiency in Figma
-
-3. Delivery Operations Manager
-   - 4+ years in logistics
-   - Team management experience
-   - Data-driven decision making
-
-To apply, please visit our careers page or send your resume to careers@zinovaa.com`, 'bot');
+        addMessage(generateCareerInfo(), 'bot');
       }, 500);
       return;
     }
@@ -139,7 +123,16 @@ To apply, please visit our careers page or send your resume to careers@zinovaa.c
         break;
       case "I want to know about career opportunities":
         setTimeout(() => {
-          addMessage(`Current openings at Zinovaa:
+          addMessage(generateCareerInfo(), 'bot');
+        }, 500);
+        break;
+      default:
+        handleUserMessage(option);
+    }
+  };
+
+  const generateCareerInfo = () => {
+    return `Current openings at Zinovaa:
           
 1. Senior Fashion Buyer
    - 5+ years experience in fashion buying
@@ -156,12 +149,7 @@ To apply, please visit our careers page or send your resume to careers@zinovaa.c
    - Team management experience
    - Data-driven decision making
 
-To apply, please visit our careers page or send your resume to careers@zinovaa.com`, 'bot');
-        }, 500);
-        break;
-      default:
-        handleUserMessage(option);
-    }
+To apply, please visit our careers page or send your resume to careers@zinovaa.com`;
   };
 
   return (
@@ -181,7 +169,7 @@ To apply, please visit our careers page or send your resume to careers@zinovaa.c
             exit={{ opacity: 0, y: 20 }}
             className="fixed bottom-24 right-6 w-[380px] max-w-[calc(100vw-3rem)] bg-gray-50 rounded-2xl shadow-xl"
           >
-            <div className="flex items-center justify-between p-4 border-b">
+            <div className="flex items-center justify-between p-4 border-b z-40 backdrop-blur-md">
               <h3 className="font-semibold">Zinovaa Assistant</h3>
               <Button
                 variant="ghost"
@@ -196,8 +184,8 @@ To apply, please visit our careers page or send your resume to careers@zinovaa.c
               ref={chatRef}
               className="h-[400px] overflow-y-auto p-4 space-y-4"
             >
-              {messages.map(message => (
-                <ChatMessage key={message.id} message={message} />
+              {messages.map((message, index) => (
+                <ChatMessage key={`${message.id}-${index}`} message={message} />
               ))}
               
               {activeForm === 'vendor' && (

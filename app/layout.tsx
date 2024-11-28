@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { outfit } from './fonts';
 import { Footer } from '@/components/layout/Footer';
 import { Chatbot } from '@/components/chat/Chatbot';
+import Header from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Zinovaa - Style That Speaks Your Language',
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={outfit.className}>
         {children}
+        <Header />
         <Footer />
         <Chatbot />
       </body>
