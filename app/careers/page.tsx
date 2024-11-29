@@ -2,53 +2,35 @@
 
 import { motion } from "framer-motion";
 import { playfair } from "@/app/fonts";
-import { Heart, Users, Zap, Trophy } from "lucide-react";
+import { Heart, Users, Zap, Trophy, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {openings} from './openingsData'
 
 export default function CareersPage() {
   const benefits = [
     {
-      icon: Heart,
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance and wellness programs"
+      icon: DollarSign,
+      title: "Pay That Matches Your Hustle",
+      description: "Get rewarded with a competitive salary and benefits that support your well-being."
     },
     {
       icon: Users,
-      title: "Team Culture",
-      description: "Collaborative environment with talented professionals"
+      title: "Vibe With the Best",
+      description: "Work in a creative, collaborative space alongside passionate, like-minded people."
     },
     {
       icon: Zap,
-      title: "Growth",
-      description: "Professional development and learning opportunities"
+      title: "Level Up Your Skills",
+      description: "Access growth opportunities, mentorship, and resources to keep improving."
     },
     {
       icon: Trophy,
-      title: "Recognition",
-      description: "Performance-based rewards and recognition"
+      title: "Your Wins, Celebrated",
+      description: "We see your grind. Earn recognition and rewards for your performance."
     }
   ];
+  
 
-  const openings = [
-    {
-      title: "Senior Fashion Buyer",
-      department: "Merchandising",
-      location: "Style City, ST",
-      type: "Full-time"
-    },
-    {
-      title: "UI/UX Designer",
-      department: "Design",
-      location: "Remote",
-      type: "Full-time"
-    },
-    {
-      title: "Delivery Operations Manager",
-      department: "Operations",
-      location: "Style City, ST",
-      type: "Full-time"
-    }
-  ];
 
   return (
     <main className="min-h-screen py-20">
@@ -62,8 +44,7 @@ export default function CareersPage() {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Be part of a dynamic team that&apos;s revolutionizing the fashion industry
-            with technology and innovation.
+          Join a squad that&apos;s shaking up the game—fusing fashion, tech, and innovation to redefine how style meets speed.
           </p>
         </motion.div>
 
@@ -87,7 +68,7 @@ export default function CareersPage() {
           <h2 className={`${playfair.className} text-3xl font-bold mb-8 text-center`}>
             Current Openings
           </h2>
-{/*           
+          
           <div className="space-y-6">
             {openings.map((job, index) => (
               <motion.div
@@ -105,18 +86,17 @@ export default function CareersPage() {
                       {job.location} • {job.type}
                     </p>
                   </div>
-                  <Button className="bg-red-600 hover:bg-red-700">
+                  <Button className="bg-red-600 text-white hover:bg-red-700">
                     Apply Now
                   </Button>
                 </div>
               </motion.div>
             ))}
-          </div> */}
+          </div>
 
-          <div className="">
+          {/* <div className="">
                     <h3 className="text-xl font-semibold mb-2">No Current Openings!</h3>
-                    
-                  </div>
+                  </div> */}
 
 
         </div>

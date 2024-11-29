@@ -158,7 +158,7 @@ To apply, please visit our careers page or send your resume to careers@zinovaa.c
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 rounded-full w-14 h-14 bg-red-600 hover:bg-red-700 shadow-lg"
       >
-        <MessageSquare className="w-6 h-6" />
+        <MessageSquare className="w-6 h-6 text-white" />
       </Button>
 
       <AnimatePresence>
