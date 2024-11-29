@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { outfit } from './fonts';
 import { Footer } from '@/components/layout/Footer';
-import Header from '@/components/layout/header';
+import Header from '@/components/layout/Header';
 import { Chatbot } from '@/components/chat/Chatbot';
 
 export const metadata: Metadata = {
