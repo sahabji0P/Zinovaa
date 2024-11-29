@@ -87,6 +87,7 @@ export default function CareersPage() {
           <h2 className={`${playfair.className} text-3xl font-bold mb-8 text-center`}>
             Current Openings
           </h2>
+{/*           
           <div className="space-y-6">
             {openings.map((job, index) => (
               <motion.div
@@ -110,7 +111,14 @@ export default function CareersPage() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
+
+          <div className="">
+                    <h3 className="text-xl font-semibold mb-2">No Current Openings!</h3>
+                    
+                  </div>
+
+
         </div>
       </div>
     </main>

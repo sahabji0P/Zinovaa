@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { quickLinks } from "@/lib/chat-data";
 import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
   const socialLinks = [
@@ -52,12 +53,19 @@ export function Footer() {
     </ul>
   </div>
 
-  <div>
+  <div className="justify-center items-center flex-row">
     <h4 className="text-xl font-semibold mb-6">Contact Us</h4>
-    <div className="space-y-3 text-gray-300">
-      <p>Email: contact@zinovaa.com</p>
-      <p>Phone: +1 (555) 123-4567</p>
-      <p>Address: 123 Fashion Street,<br />Style City, ST 12345</p>
+    <div className="space-y-3 text-gray-300 pl-10">
+      <div className="flex gap-3">
+      <Mail/>
+      <p>zinovaa30@gmail.com</p>
+      </div>
+
+      <div className="flex gap-3">
+      <Phone/>
+      <p>+91-6306010045</p>
+      </div>
+
     </div>
   </div>
 </div>

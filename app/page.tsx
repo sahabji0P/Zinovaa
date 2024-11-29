@@ -25,7 +25,7 @@ export default function Home() {
               Welcome to Zinovaa - Elevate Your Everyday
             </p>
             <p className="text-lg text-gray-500 mb-10">
-              Fashion is personal, and at Zinovaa, we take it personally. 💅 We serve up styles that scream <strong>authentic you</strong> and get them to your door at lightning speed. ⚡ Because your vibe is too good to wait. Let&apos;s slay, stat.
+              Fashion is personal, and at Zinovaa, we take it personally. 👗 We serve up styles that scream <strong>authentic you</strong> and get them to your door at lightning speed. ⚡ Because your vibe is too good to wait. Let&apos;s slay, stat.
             </p>
             <Button size="lg" className="bg-red-600 hover:bg-red-700 transform hover:scale-105 transition-all duration-300 text-white cursor-wait">
               Learn More
