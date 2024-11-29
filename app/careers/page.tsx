@@ -51,7 +51,7 @@ export default function CareersPage() {
   ];
 
   return (
-    <main className="min-h-screen py-52">
+    <main className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

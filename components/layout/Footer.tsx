@@ -43,6 +43,7 @@ export function Footer() {
           <Link 
             href={link.href}
             className="text-gray-300 hover:text-white transition-colors"
+            target="_blank"
           >
             {link.title}
           </Link>

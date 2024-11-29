@@ -25,7 +25,7 @@ export default function VendorPage() {
   ];
 
   return (
-    <main className="min-h-screen py-52">
+    <main className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div

@@ -8,29 +8,31 @@ export type FAQ = {
 export const faqs: FAQ[] = [
   {
     question: "What are your business hours?",
-    answer: "We're open Monday to Friday, 9 AM - 8 PM, and Saturday to Sunday, 10 AM - 6 PM EST."
+    answer: "We’re always open—24/7, 365 days. Fashion never sleeps, and neither do we! 🌙✨"
   },
   {
     question: "What services do you offer?",
-    answer: "We offer curated fashion collections with express delivery (30-60 minutes), personal styling consultations, and hassle-free returns."
+    answer: "We’re your plug for curated fashion delivered in 30-60 mins, personal styling tips, and returns so easy you won’t break a sweat. 💅🚀"
   },
   {
     question: "What are your pricing ranges?",
-    answer: "Our collections range from affordable everyday wear ($30-100) to premium designer pieces ($100-500+). Express delivery is complimentary on orders over $50."
+    answer: "We’ve got something for everyone—whether you’re after budget-friendly fits or premium designer drips. But one thing stays the same: top-tier quality, no matter the tag. 🛍️✨"
   },
+  
   {
     question: "How can I become a vendor?",
-    answer: "To become a vendor, you'll need to: 1) Complete our vendor registration form 2) Submit required business documents 3) Pass our quality assessment. Our team typically reviews applications within 5-7 business days."
+    answer: "Wanna join the squad? 1) Fill out our vendor form, 2) Show us your docs, and 3) Pass the vibe (quality) check. We’ll hit you up in 5-7 biz days. 📑✨"
   },
   {
     question: "What career opportunities are available?",
-    answer: "We're currently hiring for: \n- Senior Fashion Buyer\n- UI/UX Designer\n- Delivery Operations Manager\n- Customer Experience Specialist\nVisit our careers page for detailed job descriptions and requirements."
+    answer: "We’re hiring! Roles: \n- Senior Fashion Buyer 👗🛍️\n- UI/UX Designer 🎨✨\n- Delivery Ops Manager 🚛⚡\n- Customer Experience Specialist 💬❤️\nHit our careers page to apply!"
   },
   {
     question: "What's the vendor onboarding process?",
-    answer: "Our vendor onboarding includes: 1) Application review 2) Quality assessment 3) Contract signing 4) Platform integration 5) Training session. The process typically takes 2-3 weeks."
+    answer: "It’s simple: 1) We review your app, 2) Check your quality game, 3) Sign the dotted line, 4) Integrate you into the fam, 5) Quick training sesh. Done in 2-3 weeks! 🚀👔"
   }
 ];
+
 
 export type ChatMessage = {
   id: string;

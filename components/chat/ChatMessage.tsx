@@ -12,7 +12,7 @@ export function ChatMessage({ message }: { message: ChatMessageType }) {
       className={cn(
         "max-w-[80%] rounded-lg p-4 mb-4",
         message.type === "bot" 
-          ? "bg-white text-gray-800 ml-0" 
+          ? "bg-green-400 text-gray-800 ml-0" 
           : "bg-red-600 text-white ml-auto"
       )}
     >
