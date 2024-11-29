@@ -4,6 +4,7 @@ import { outfit } from './fonts';
 import { Footer } from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import { Chatbot } from '@/components/chat/Chatbot';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: 'Zinovaa - Style That Speaks Your Language',
@@ -22,6 +23,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Chatbot />
+        <Analytics/>
       </body>
     </html>
   );
