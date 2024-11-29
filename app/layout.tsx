@@ -2,8 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { outfit } from './fonts';
 import { Footer } from '@/components/layout/Footer';
+import Header from '@/components/layout/header';
 import { Chatbot } from '@/components/chat/Chatbot';
-import Header from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Zinovaa - Style That Speaks Your Language',
@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        {children}
         <Header />
+        {children}
         <Footer />
         <Chatbot />
       </body>
