@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { playfair } from "./fonts";
+import { playfair } from "../components/layout/fonts";
 import { Button } from "@/components/ui/button";
 import { MotionSection } from "@/components/ui/motion-section";
 import { ShoppingBag, Truck, Clock, Shield, HeartHandshake, MessageSquare, Sparkles, CheckCircle2, Zap, Heart } from "lucide-react";
@@ -30,7 +30,7 @@ export default function Home() {
             </p>
 
             <Link href="/learn-more">            
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 transform hover:scale-105 transition-all duration-300 text-white cursor-wait">
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 transform hover:scale-105 transition-all duration-300 text-white cursor-help">
               Learn More
             </Button>
             </Link>

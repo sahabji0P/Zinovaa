@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { playfair } from "@/app/fonts";
+import { playfair } from "@/components/layout/fonts";
 import { Heart, Users, Zap, Trophy, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {openings} from './openingsData'
@@ -32,7 +32,7 @@ export default function CareersPage() {
   
 
 
-  return (
+  return (   
     <main className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <motion.div

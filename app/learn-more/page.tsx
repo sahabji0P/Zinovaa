@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { playfair } from "../fonts";
+import { playfair } from "../../components/layout/fonts";
 import { learnMoreContent, learnMorePageContent } from "./data";
 import { Shield, HeartHandshake, Truck, MessageSquare, CheckCircle2, Sparkles } from "lucide-react";
 import React from "react";

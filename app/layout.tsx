@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { outfit } from './fonts';
+import { outfit } from '../components/layout/fonts';
 import { Footer } from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import { Chatbot } from '@/components/chat/Chatbot';

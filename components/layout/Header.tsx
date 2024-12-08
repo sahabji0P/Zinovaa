@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { playfair } from "@/app/fonts";
+import { playfair } from "@/components/layout/fonts";
 import Link from 'next/link';
 import { Banner } from './Banner';
 

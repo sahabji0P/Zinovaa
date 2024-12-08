@@ -10,7 +10,7 @@ import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
   const socialLinks = [
-    { icon: Instagram, href: "#" },
+    { icon: Instagram, href: "https://www.instagram.com/zinovaa.official" },
     { icon: Facebook, href: "#" },
     { icon: Twitter, href: "#" }
   ];
@@ -55,10 +55,10 @@ export function Footer() {
 
   <div className="justify-center items-center flex-row">
     <h4 className="text-xl font-semibold mb-6">Contact Us</h4>
-    <div className="space-y-3 text-gray-300 pl-10">
+    <div className="space-y-3 text-gray-300 pl-14">
       <div className="flex gap-3">
       <Mail/>
-      <p>zinovaa30@gmail.com</p>
+      <p>zinova.in@gmail.com</p>
       </div>
 
       <div className="flex gap-3">

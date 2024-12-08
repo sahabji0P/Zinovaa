@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { playfair } from "./fonts";
+import { playfair } from "../components/layout/fonts";
 
 export default function Loading() {
   const letterVariants = {

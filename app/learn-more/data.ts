@@ -61,7 +61,7 @@ export interface VendorRequirements {
       ]
     },
     locationRequirements: {
-      deliverySpeedUSP: "30-Minute Rapid Delivery Guaranteed",
+      deliverySpeedUSP: "30-60 Minute Rapid Delivery Guaranteed",
       locationCoverage: [
         "Urban City Centers",
         "Metropolitan Areas",

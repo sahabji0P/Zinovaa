@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { VendorForm } from "@/components/chat/forms/VendorForm";
-import { playfair } from "@/app/fonts";
+import { playfair } from "@/components/layout/fonts";
 import { Shield, Award, Clock } from "lucide-react";
 
 export default function VendorPage() {
