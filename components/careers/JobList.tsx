@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Job } from "@/types/careers";
-import { jobOpenings } from "@/lib/career-data";
+import { jobOpenings } from "@/app/careers/career-data";
 
 interface JobListProps {
   onSelect: (job: Job) => void;
