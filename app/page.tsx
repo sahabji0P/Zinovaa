@@ -138,7 +138,7 @@ export default function Home() {
       <MotionSection className="py-20 section-pattern">
         <div className="container mx-auto px-4">
           <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 text-gradient`}>
-            Zinnova&apos;s Promise
+            Zinovaa&apos;s Promise
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {[

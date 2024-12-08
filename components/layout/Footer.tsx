@@ -58,7 +58,7 @@ export function Footer() {
     <div className="space-y-3 text-gray-300 pl-14">
       <div className="flex gap-3">
       <Mail/>
-      <p>zinova.in@gmail.com</p>
+      <p>zinovaa.in@gmail.com</p>
       </div>
 
       <div className="flex gap-3">
@@ -71,7 +71,7 @@ export function Footer() {
 </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} Zinovaa. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <span className="font-bold"> Zinovaa </span> All rights reserved | Powered by <Link href="https://www.instagram.com/web.landers" target="_blank"> <span className="font-semibold">Web Landers</span></Link></p>
         </div>
       </div>
     </footer>
