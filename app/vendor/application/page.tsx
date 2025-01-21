@@ -524,7 +524,7 @@ export default function VendorForm() {
                                                 className="block text-gray-600 text-sm cursor-pointer"
                                             >
                                                 <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                                                Click to upload or drag and drop
+                                                Click to upload!
                                                 <br />
                                                 <span className="text-sm">(Images or PDF, max 10MB)</span>
                                             </label>
@@ -572,7 +572,7 @@ export default function VendorForm() {
                                                 className="block text-gray-600 text-sm cursor-pointer"
                                             >
                                                 <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                                                Click to upload or drag and drop
+                                                Click to upload!
                                                 <br />
                                                 <span className="text-sm">(Images or PDF, max 5MB)</span>
                                             </label>

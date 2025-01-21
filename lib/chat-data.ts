@@ -1,9 +1,12 @@
-import { VendorFormData, CustomerFormData } from '@/types/forms';
 
 export type FAQ = {
   question: string;
   answer: string;
-};
+  links?: {
+    title: string;
+    url: string;
+  }[];
+}
 
 export const faqs: FAQ[] = [
   {
@@ -18,14 +21,20 @@ export const faqs: FAQ[] = [
     question: "What are your pricing ranges?",
     answer: "We’ve got something for everyone—whether you’re after budget-friendly fits or premium designer drips. But one thing stays the same: top-tier quality, no matter the tag. 🛍️✨"
   },
-  
+
   {
     question: "How can I become a vendor?",
-    answer: "Wanna join the squad? 1) Fill out our vendor form, 2) Show us your docs, and 3) Pass the vibe (quality) check. We’ll hit you up in 5-7 biz days. 📑✨"
+    answer: "Wanna join the squad? 1) Fill out our vendor form, 2) Show us your docs, and 3) Pass the vibe (quality) check. We’ll hit you up in 5-7 biz days. 📑✨",
+    links: [
+      { title: "Vendor Onboarding", url: "/vendor" }
+    ]
   },
   {
     question: "What career opportunities are available?",
-    answer: "We’re hiring! Roles: \n- Senior Fashion Buyer 👗🛍️\n- UI/UX Designer 🎨✨\n- Delivery Ops Manager 🚛⚡\n- Customer Experience Specialist 💬❤️\nHit our careers page to apply!"
+    answer: "We’re hiring! Roles: \n- Senior Fashion Buyer 👗🛍️\n- UI/UX Designer 🎨✨\n- Delivery Ops Manager 🚛⚡\n- Customer Experience Specialist 💬❤️\nHit our careers page to apply!",
+    links: [
+      { title: "Careers at Zinovaa", url: "/careers" }
+    ]
   },
   {
     question: "What's the vendor onboarding process?",
