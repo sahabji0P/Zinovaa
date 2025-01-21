@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { VendorForm } from "@/components/chat/forms/VendorForm";
 import { playfair } from "@/components/layout/fonts";
-import { Shield, Award, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+import { Award, Clock, Shield } from "lucide-react";
+import Link from "next/link";
 
 export default function VendorPage() {
   const requirements = [
@@ -55,22 +55,21 @@ export default function VendorPage() {
                 <p className="text-gray-600">{req.description}</p>
               </motion.div>
             ))}
+
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className={`${playfair.className} text-2xl font-bold mb-6`}>
-              Vendor Registration Form
-            </h2>
-            <VendorForm 
-              onSubmit={(data) => {
-                console.log('Form submitted:', data);
-                // Handle form submission
-              }}
-              onCancel={() => {
-                // Handle cancellation
-              }}
-            />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-center font-bold hover:text-red-600"
+          >
+            <Link href={`/vendor/application`}>
+              <h2 className="cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-125 text-2xl">
+                Click to Register As a Vendor!
+              </h2>   </Link>       </motion.div>
+
+
         </div>
       </div>
     </main>

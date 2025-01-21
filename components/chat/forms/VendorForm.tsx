@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Checkbox } from '@/components/ui/checkbox';
 import { VendorFormData } from '@/types/forms';
+import { useState } from 'react';
 
 interface VendorFormProps {
   onSubmit: (data: VendorFormData) => void;
@@ -40,7 +40,7 @@ export function VendorForm({ onSubmit, onCancel }: VendorFormProps) {
           required
         />
       </div>
-      
+
       <div>
         <Label htmlFor="contactPerson">Contact Person</Label>
         <Input
@@ -102,7 +102,7 @@ export function VendorForm({ onSubmit, onCancel }: VendorFormProps) {
         <Checkbox
           id="terms"
           checked={formData.acceptTerms}
-          onCheckedChange={(checked) => 
+          onCheckedChange={(checked) =>
             setFormData({ ...formData, acceptTerms: checked as boolean })
           }
           required
