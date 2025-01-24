@@ -14,8 +14,9 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Building2, Send, Trash2, Upload } from "lucide-react";
+import { Award, Building2, Clock, Send, Shield, Trash2, Upload } from "lucide-react";
 import { useState } from "react";
+
 
 // TypeScript interfaces
 interface VendorForm {
@@ -43,7 +44,7 @@ interface VendorForm {
     comments: string;
 }
 
-export default function VendorForm() {
+export default function VendorApplication() {
     const [formData, setFormData] = useState<VendorForm>({
         brandName: '',
         name: '',
@@ -94,8 +95,26 @@ export default function VendorForm() {
         console.log(formData);
     };
 
+    const requirements = [
+        {
+            icon: Shield,
+            title: "Business Registration",
+            description: "Valid business registration and tax documents"
+        },
+        {
+            icon: Award,
+            title: "Quality Standards",
+            description: "Meet our product quality and authenticity standards"
+        },
+        {
+            icon: Clock,
+            title: "Delivery Commitment",
+            description: "Ability to fulfill orders within our delivery timeframe"
+        }
+    ];
+
     return (
-        <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16 px-4 flex items-center justify-center">
+        <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-10 px-4 flex items-center justify-center">
             <div className="container max-w-4xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -121,6 +140,23 @@ export default function VendorForm() {
                             Join our fashion revolution! Let&apos;s create something extraordinary together.
                             Fill out this form to begin our partnership journey.
                         </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8 mb-16">
+                        {requirements.map((req, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.2 }}
+                                className="bg-white p-6 rounded-lg shadow-lg"
+                            >
+                                <req.icon className="w-12 h-12 text-red-600 mb-4" />
+                                <h3 className="text-xl font-semibold mb-2">{req.title}</h3>
+                                <p className="text-gray-600">{req.description}</p>
+                            </motion.div>
+                        ))}
+
                     </div>
 
                     {/* Form Section */}
