@@ -17,8 +17,6 @@ import { motion } from "framer-motion";
 import { Award, Building2, Clock, Send, Shield, Trash2, Upload } from "lucide-react";
 import { useState } from "react";
 
-
-// TypeScript interfaces
 interface VendorForm {
     brandName: string;
     name: string;
