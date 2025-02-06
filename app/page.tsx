@@ -1,17 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { playfair } from "../components/layout/fonts";
 import { Button } from "@/components/ui/button";
 import { MotionSection } from "@/components/ui/motion-section";
-import { ShoppingBag, Truck, Clock, Shield, HeartHandshake, MessageSquare, Sparkles, CheckCircle2, Zap, Heart } from "lucide-react";
+import { motion } from "framer-motion";
+import { CheckCircle2, Clock, Heart, HeartHandshake, MessageSquare, Shield, ShoppingBag, Sparkles, Truck, Zap } from "lucide-react";
 import Link from "next/link";
+import { playfair, poppins } from "../components/layout/fonts";
+
+// Fun but professional color scheme
+const PRIMARY_COLOR = "rgb(147 51 234)" // Electric purple
+const ACCENT_COLOR = "rgb(255 214 0)" // Sunny yellow
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className={`min-h-screen bg-gradient-to-b from-purple-50 to-white ${poppins.className}`}>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 hero-gradient">
+      <section className="pt-32 pb-20 bg-[url('/sparkles.svg')] bg-contain">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -19,52 +23,77 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className={`${playfair.className} text-5xl md:text-6xl font-bold mb-6 text-gradient pb-2`}>
-              Style That Speaks Your Language
+            <h2 className={`${playfair.className} text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-black bg-clip-text text-transparent pb-2`}>
+              Slay All Day 🕺<br />
+              <span className="text-4xl md:text-5xl">With Zinovaa!</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Welcome to Zinovaa - Elevate Your Everyday
+            <p className="text-xl text-gray-700 mb-8 flex items-center justify-center gap-2">
+              <Sparkles className="w-5 h-5 text-yellow-400" />
+              Fashion That Makes You Go "YAAAS!" 👑
+              <Sparkles className="w-5 h-5 text-yellow-400" />
             </p>
-            <p className="text-lg text-gray-500 mb-10">
-              Fashion is personal, and at Zinovaa, we take it personally. 👗 We serve up styles that scream <strong>authentic you</strong> and get them to your door at lightning speed. ⚡ Because your vibe is too good to wait. Let&apos;s slay, stat.
+            <p className="text-lg text-gray-600 mb-10 bg-white p-6 rounded-xl shadow-lg border-2 border-purple-100">
+              We're not just clothes - we're <span className="text-purple-600 font-bold">vibe curators</span>! Get
+              Instagram-ready fits faster than you can say "OOTD" 📸.
+              Your wardrobe glow-up starts now!
             </p>
 
-            <Link href="/learn-more">            
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 transform hover:scale-105 transition-all duration-300 text-white cursor-help">
-              Learn More
-            </Button>
+            <Link href="/shop-now">
+              <Button size="lg" className={`bg-purple-600 hover:bg-purple-700 transform hover:scale-105 
+              transition-all duration-300 text-white shadow-xl hover:shadow-purple-400/40
+              flex gap-2 items-center text-lg`}>
+                <Zap className="w-5 h-5 animate-pulse" />
+                Shop Fierce Looks Now
+              </Button>
             </Link>
           </motion.div>
         </div>
       </section>
 
       {/* Shopping Experience */}
-      <MotionSection className="py-20 section-pattern">
+      <MotionSection className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 text-gradient`}>
-            The Zinovaa&apos;s Shopping Experience
+          <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 
+            bg-gradient-to-r from-purple-600 to-black bg-clip-text text-transparent`}>
+            How We Slay 💅
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: ShoppingBag, title: "Browse", desc: "Explore our carefully curated collections at your convenience." },
-              { icon: Clock, title: "Select", desc: "Choose from a wide range of styles that speak to your personal aesthetic." },
-              { icon: Truck, title: "Deliver", desc: "Get your fashion finds delivered right to your doorstep within 30–60 minutes." }
+              {
+                icon: ShoppingBag,
+                title: "Browse & Drool 🤤",
+                desc: "500+ jaw-dropping styles waiting for your 👉👈"
+              },
+              {
+                icon: Clock,
+                title: "1-Click Wonder ✨",
+                desc: "Add to cart faster than your crush replies 💘"
+              },
+              {
+                icon: Truck,
+                title: "Zoom Delivery 🚀",
+                desc: "Get your drip in 30 mins - fresher than morning coffee ☕"
+              }
             ].map((item, i) => (
               <motion.div
                 key={i}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  rotateY: 10,
+                  rotate: i % 2 === 0 ? 2 : -2,
                 }}
-                className="glass-card p-8 rounded-2xl text-center feature-card"
+                className="bg-white p-8 rounded-2xl text-center border-2 border-purple-100 
+                  shadow-lg hover:shadow-purple-200/40 relative overflow-hidden"
               >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 
+                  rounded-bl-full transform rotate-45 translate-x-12 -translate-y-8" />
                 <motion.div
-                  whileHover={{ rotateZ: 360 }}
-                  transition={{ duration: 0.6 }}
+                  whileHover={{ scale: 1.2 }}
+                  className="mb-6 inline-block"
                 >
-                  <item.icon className="w-12 h-12 mx-auto mb-6 text-red-600" />
+                  <item.icon className="w-14 h-14 mx-auto p-3 rounded-full 
+                    bg-purple-100 text-purple-600" />
                 </motion.div>
-                <h4 className="text-xl font-semibold mb-4">{item.title}</h4>
+                <h4 className="text-2xl font-bold mb-4 text-gray-800">{item.title}</h4>
                 <p className="text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
@@ -72,103 +101,119 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      {/* What Makes Us Different */}
-      <MotionSection className="py-20 bg-gradient-to-b from-white to-gray-50">
+      {/* Unique Selling Points */}
+      <MotionSection className="py-20 bg-purple-50">
         <div className="container mx-auto px-4">
-          <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 text-gradient`}>
-            What Makes Us Different
+          <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 
+            bg-gradient-to-r from-purple-600 to-black bg-clip-text text-transparent`}>
+            Why We're BAE 💖
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Regular cards */}
             {[
-              { 
-                icon: Sparkles, 
-                title: "Curated Excellence",
-                desc: "We don't just sell clothes—we curate vibes. Every piece is handpicked to bring you that perfect mix of quality and style. 🔥"
+              {
+                icon: Sparkles,
+                title: "TikTok-Worthy Threads 📱",
+                desc: "Styles so fire, your FYP will be jealous 🔥"
               },
               {
                 icon: CheckCircle2,
-                title: "Trend-Forward Selection",
-                desc: "Stay ahead, not behind. Our collections are constantly updated to keep your fits fresh and on point, blending today's trends with timeless staples. ✨"
+                title: "No Basic Vibes 🚫",
+                desc: "We filter out basic so you don't have to 🙅♂️"
               },
               {
                 icon: Shield,
-                title: "Quality You Can Trust",
-                desc: "Our pieces don't just slay—they stay. Built to last, every item is checked to make sure it looks good and wears even better. 💪👗"
+                title: "Built to Flex 💪",
+                desc: "Quality that survives even the wildest nights 🌃"
               }
             ].map((item, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className="glass-card p-8 rounded-xl feature-card"
+                className="bg-white p-8 rounded-xl border-2 border-purple-100 
+                  shadow-md hover:shadow-lg transition-shadow"
               >
-                <item.icon className="w-12 h-12 text-red-600 mb-4" />
-                <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
-                <p className="text-gray-600">{item.desc}</p>
+                <div className="mb-4 flex items-center gap-3">
+                  <item.icon className="w-10 h-10 text-purple-600" />
+                  <h4 className="text-xl font-bold text-gray-800">{item.title}</h4>
+                </div>
+                <p className="text-gray-600 pl-2 border-l-4 border-purple-200">
+                  {item.desc}
+                </p>
               </motion.div>
             ))}
 
-            {/* Highlighted cards */}
+            {/* Highlight Cards */}
             <motion.div
-              whileHover={{ y: -10 }}
-              className="highlight-card bg-red-600 p-8 rounded-xl text-white transform hover:scale-105 transition-all duration-300 lg:col-span-2"
+              whileHover={{ scale: 1.02 }}
+              className="lg:col-span-2 bg-purple-600 p-8 rounded-xl text-white 
+                shadow-xl relative overflow-hidden"
             >
-              <Zap className="w-12 h-12 text-white mb-4" />
-              <h4 className="text-2xl font-semibold mb-3">Fast & Fierce Delivery</h4>
-              <p className="text-white/90 text-lg">
-                Why wait? Get your fashion fix in 30-60 minutes. Your next iconic look is just a tap away. ⏱️📦
+              <div className="absolute -top-16 -right-16 w-32 h-32 bg-purple-400/20 rounded-full" />
+              <div className="flex items-center gap-4 mb-4">
+                <Zap className="w-12 h-12 text-yellow-300 animate-bounce" />
+                <h4 className="text-2xl font-bold">Flash Delivery ⚡</h4>
+              </div>
+              <p className="text-lg text-purple-100 pl-2">
+                Your order's FOMO ends in 30 mins! We zoom faster than
+                gossip spreads in group chats 💨
               </p>
+              <div className="absolute bottom-0 right-0 text-8xl opacity-10">
+                🚚
+              </div>
             </motion.div>
 
             <motion.div
-              whileHover={{ y: -10 }}
-              className="highlight-card bg-red-600 p-8 rounded-xl text-white transform hover:scale-105 transition-all duration-300"
+              whileHover={{ scale: 1.02 }}
+              className="bg-yellow-400 p-8 rounded-xl text-gray-900 
+                shadow-xl relative overflow-hidden"
             >
-              <Heart className="w-12 h-12 text-white mb-4" />
-              <h4 className="text-2xl font-semibold mb-3">You First, Always</h4>
-              <p className="text-white/90 text-lg">
-                We&apos;ve got your back. From personalized styling tips to a seamless shopping experience, everything we do is designed to make you look and feel like your best self. 💌👛
+              <div className="absolute -top-8 -right-8 w-24 h-24 bg-yellow-300/20 rounded-full" />
+              <div className="flex items-center gap-4 mb-4">
+                <Heart className="w-12 h-12 text-red-500" />
+                <h4 className="text-2xl font-bold">Squad Love 💞</h4>
+              </div>
+              <p className="text-lg pl-2">
+                24/7 stylists who vibe with your aesthetic harder
+                than your BFF 👯
               </p>
+              <div className="absolute bottom-0 right-0 text-8xl opacity-10">
+                💌
+              </div>
             </motion.div>
           </div>
         </div>
       </MotionSection>
 
-      {/* Customer Promise */}
-      <MotionSection className="py-20 section-pattern">
+      {/* Trust Badges */}
+      <MotionSection className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 text-gradient`}>
-            Zinovaa&apos;s Promise
+          <h3 className={`${playfair.className} text-4xl font-bold text-center mb-16 
+            bg-gradient-to-r from-purple-600 to-black bg-clip-text text-transparent`}>
+            Pinky Promises 🤙
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              { icon: Shield, text: "Authentic Products" },
+              { icon: Shield, text: "Zero Fake Stuff" },
               { icon: HeartHandshake, text: "Easy Returns" },
-              { icon: Shield, text: "Secure Payments" },
-              { icon: Truck, text: "Express Delivery" },
-              { icon: MessageSquare, text: "24/7 Support" }
+              { icon: "💳", text: "Safe Payments" },
+              { icon: Truck, text: "Zoom Delivery" },
+              { icon: MessageSquare, text: "24/7 Vibe Check" }
             ].map((item, i) => (
               <motion.div
                 key={i}
-                whileHover={{ 
-                  scale: 1.1,
-                  rotateZ: 5,
+                whileHover={{
+                  scale: 1.05,
+                  rotate: i % 2 === 0 ? 3 : -3,
                 }}
-                className="glass-card p-6 rounded-xl text-center feature-card"
+                className="bg-white p-6 rounded-xl text-center border-2 border-purple-100 
+                  shadow-sm hover:shadow-md transition-shadow"
               >
-                <motion.div
-                  animate={{
-                    y: [0, -5, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <item.icon className="w-10 h-10 text-red-600 mb-4 mx-auto" />
-                </motion.div>
-                <p className="font-medium">{item.text}</p>
+                {typeof item.icon === 'string' ? (
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                ) : (
+                  <item.icon className="w-10 h-10 mx-auto mb-4 text-purple-600" />
+                )}
+                <p className="font-semibold text-gray-700">{item.text}</p>
               </motion.div>
             ))}
           </div>
