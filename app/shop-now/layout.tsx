@@ -1,5 +1,6 @@
 // app/layout.tsx
 "use client";
+import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { MapPin, Search, ShoppingCart, User } from "lucide-react";
 import { Inter } from "next/font/google";
@@ -90,6 +91,7 @@ export default function RootLayout({
                         {children}
                     </div>
                 </main>
+                <Footer />
             </body>
         </html>
     )
