@@ -7,11 +7,13 @@ import { CheckCircle2, Clock, Heart, HeartHandshake, MessageSquare, Shield, Shop
 import Link from "next/link";
 import { playfair, poppins } from "../components/layout/fonts";
 
+
 // Fun but professional color scheme
 const PRIMARY_COLOR = "rgb(147 51 234)" // Electric purple
 const ACCENT_COLOR = "rgb(255 214 0)" // Sunny yellow
 
 export default function Home() {
+
   return (
     <main className={`min-h-screen bg-gradient-to-b from-purple-50 to-white ${poppins.className}`}>
       {/* Hero Section */}
@@ -38,14 +40,28 @@ export default function Home() {
               Your wardrobe glow-up starts now!
             </p>
 
-            <Link href="/shop-now">
-              <Button size="lg" className={`bg-purple-600 hover:bg-purple-700 transform hover:scale-105 
-              transition-all duration-300 text-white shadow-xl hover:shadow-purple-400/40
-              flex gap-2 items-center text-lg`}>
-                <Zap className="w-5 h-5 animate-pulse" />
-                Shop Fierce Looks Now
-              </Button>
-            </Link>
+            <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
+              <Link href="/shop-now">
+                <Button size="lg" className={`bg-purple-600 hover:bg-purple-700 transform hover:scale-105 
+            transition-all duration-300 text-white shadow-xl hover:shadow-purple-400/40
+            flex gap-2 items-center text-lg w-full md:w-auto`}>
+                  <Zap className="w-5 h-5 animate-pulse" />
+                  Shop Fierce Looks Now
+                </Button>
+              </Link>
+
+              <Link href="/learn-more">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className={`border-2 border-purple-600 text-purple-600 hover:bg-purple-50 
+              transform hover:scale-105 transition-all duration-300 hover:border-purple-700
+              shadow-md hover:shadow-purple-200/40 flex gap-2 items-center text-lg w-full md:w-auto`}>
+                  <Sparkles className="w-5 h-5" />
+                  Learn More
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
